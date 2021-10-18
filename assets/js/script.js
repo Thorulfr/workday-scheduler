@@ -1,10 +1,6 @@
 // Alias Luxon for easier use
 var DateTime = luxon.DateTime;
 
-// Get HTML elements so we can manipulate them
-// var todayEl = $('#currentDay');
-
-
 // Variable declarations
 const today = DateTime.now().toLocaleString(DateTime.DATE_HUGE);
 // const currentHour = DateTime.now().get('hour');
@@ -30,24 +26,37 @@ function colorCode() {
     }
 }
 
-// Create 
+// Load task items on page load
+function loadTasks() {
+    for (let i = 9; i < 17; i++) {
+        $('#' + i).find('span').text(localStorage.getItem(i));
+    }
+}
 
 // BEGIN Listeners
-// Listen for clicks inside hour spans, then trigger input field
-$('.task-text').on ('click', 'span', function() {
+// Trigger input field when user clicks on hour block
+$('.task-text').on('click', 'span', function() {
     var text = $(this).text().trim();
     var textInput = $("<textarea>").addClass("form-control").val(text);
     $(this).replaceWith(textInput);
     textInput.trigger("focus");
 });
-// Listen for when user clicks out of editing hour span, then store text
+
+// Store text in input field when user clicks out
 $('.task-text').on('blur', 'textarea', function() {
     var text = $(this).val().trim();
     var newSpan = $('<span>').text(text);
     $(this).replaceWith(newSpan);
-    
+});
+
+// Save text in hour block when user clicks corresponding save button
+$('.saveBtn').on('click', function() {
+    var key = $(this).prev().attr('id');
+    var value = $(this).prev().text();
+    localStorage.setItem(key, value);
 });
 // END Listeners
 
+loadTasks();
 displayTodaysDate();
 colorCode();
