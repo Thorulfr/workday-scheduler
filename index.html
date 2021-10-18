@@ -18,21 +18,61 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Workday Scheduler</title>
   </head>
 
   <body>
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <h1 class="display-2">Workday Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your workday.</p>
+      <p class="lead">Here's your schedule for:</p>
+      <h2 class="display-4" id="currentDay"></h2>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
+    <div class="container" id="hour-blocks">
+      <div class="row time-block">
+        <div class="col hour">09:00</div>
+        <div class="col-10 task-text" id="9" ><span></span></div>
+        <div class="col saveBtn"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="col hour">10:00</div>
+        <div class="col-10 task-text" id="10"><span></span></div>
+        <div class="col saveBtn"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="col hour">11:00</div>
+        <div class="col-10 task-text" id="11"><span></span></div>
+        <div class="col saveBtn"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="col hour">12:00</div>
+        <div class="col-10 task-text" id="12"><span></span></div>
+        <div class="col saveBtn"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="col hour">13:00</div>
+        <div class="col-10 task-text" id="13"><span></span></div>
+        <div class="col saveBtn"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="col hour">14:00</div>
+        <div class="col-10 task-text" id="14"><span></span></div>
+        <div class="col saveBtn"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="col hour">15:00</div>
+        <div class="col-10 task-text" id="15"><span></span></div>
+        <div class="col saveBtn"><i class="fas fa-save"></i></div>
+      </div>
+      <div class="row time-block">
+        <div class="col hour">16:00</div>
+        <div class="col-10 task-text" id="16"><span></span></div>
+        <div class="col saveBtn"><i class="fas fa-save"></i></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
