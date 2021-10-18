@@ -3,8 +3,7 @@ var DateTime = luxon.DateTime;
 
 // Variable declarations
 const today = DateTime.now().toLocaleString(DateTime.DATE_HUGE);
-// const currentHour = DateTime.now().get('hour');
-const currentHour = 12;
+const currentHour = DateTime.now().get('hour');
 
 // Display today's date
 function displayTodaysDate() {
