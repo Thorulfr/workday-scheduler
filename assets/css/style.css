@@ -37,7 +37,7 @@ textarea{
 }
 
 .hour {
-  background-color: #06ced5;
+  background-color: #ffb24e;
   color: white;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -76,7 +76,8 @@ textarea{
   font-size: 24px;
 }
 
-.col {
+.col,
+.col-10 {
   display: flex;
   justify-content: center;
   align-items: center;
